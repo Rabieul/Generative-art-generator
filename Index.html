@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Art Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Generative Art</h1>
+    </header>
+
+    <main>
+        <canvas id="art-canvas" width="500" height="500"></canvas>
+
+        <div class="controls">
+            <label for="num-shapes">Number of Shapes:</label>
+            <input type="number" id="num-shapes" value="50" min="1">
+
+            <label for="shape-size">Shape Size:</label>
+            <input type="range" id="shape-size" min="1" max="50" value="20">
+
+            <label for="shape-type">Shape Type:</label>
+            <select id="shape-type">
+                <option value="rectangle">Rectangle</option>
+                <option value="circle">Circle</option>
+                <option value="triangle">Triangle</option>
+                <option value="line">Line</option>
+                <!-- Add more shapes if you want -->
+            </select>
+
+            <label for="color-palette">Color Palette:</label>
+            <select id="color-palette">
+                <option value="random">Random</option>
+                <option value="warm">Warm</option>
+                <option value="cool">Cool</option>
+                <option value="custom">Custom</option>
+            </select>
+
+            <label for="custom-color">Custom Color:</label>
+            <input type="color" id="custom-color" value="#000000" disabled>
+
+            <label for="background-color">Background Color:</label>
+            <input type="color" id="background-color" value="#ffffff">
+
+            <label for="gradient">Use Gradient:</label>
+            <input type="checkbox" id="gradient">
+
+            <label for="pattern">Use Pattern:</label>
+            <input type="checkbox" id="pattern">
+
+            <button id="generate-button">Generate</button>
+            <button id="save-button">Save Image</button>
+            <button id="save-preset-button">Save Preset</button>
+            <button id="load-preset-button">Load Preset</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Rabieul Rahman</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
